@@ -1,0 +1,89 @@
+@import './reset.scss';
+@import './components.scss';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F8F8F8;
+  color: #222222;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+  line-height: 3.2rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.28rem;
+}
+
+.text--desc {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.21438rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.08em;
+  line-height: 1.3rem;
+  color: #F8F8F8;
+
+  &.primary {
+    background-color: #E2211C;
+
+    &.active {
+      border: 1px solid #F8F8F8;
+    }
+  }
+
+  &.secondary {
+    background-color: #3C77B9;
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+
+  & div {
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background-color: #E2211C;
+    transition: all 0.4s ease-in;
+  }
+}
+
+
+@media (max-width: 840px) {
+  .burger {
+    display: block;
+  }
+
+}
+
+@media (max-width: 425px) {
+
+  h1, .h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    &__primary {
+      font-size: 0.8rem;
+    }
+  }
+}
